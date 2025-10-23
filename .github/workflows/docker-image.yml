@@ -29,7 +29,7 @@ jobs:
           context: ./HOTELMANGEMENTAPI-SRPINGBOOT
           file: ./HOTELMANGEMENTAPI-SRPINGBOOT/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME || 'priyankasml' }}/docker-backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME || 'priyankasml' }}/hotel-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,4 +37,4 @@ jobs:
           context: ./HOTELMANGEMENTAPI-REACT
           file: ./HOTELMANGEMENTAPI-REACT/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME || 'priyankasml' }}/docker-frontend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME || 'priyankasml' }}/hotel-frontend:latest
