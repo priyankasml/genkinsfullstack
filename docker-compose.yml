@@ -13,7 +13,7 @@ services:
       - springboot-mysql-net
 
   backend:
-    image: priyankasml/docker-backend:latest
+    image: priyankasml/hotel-backend:latest
     container_name: springboot-hoteldb
     ports:
       - "8081:2000"
@@ -24,7 +24,7 @@ services:
       - springboot-mysql-net
 
   frontend:
-    image: priyankasml/docker-frontend:latest
+    image: priyankasml/hotel-frontend:latest
     container_name: react-hoteldb
     ports:
       - "3020:80"
