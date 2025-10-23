@@ -27,7 +27,7 @@ services:
     image: priyankasml/docker-frontend:latest
     container_name: react-hoteldb
     ports:
-      - "3009:80"
+      - "3020:80"
     depends_on:
       - backend
     restart: on-failure
