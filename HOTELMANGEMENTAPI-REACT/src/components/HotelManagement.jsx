@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { API_URL } from "../config.js";
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 const HotelManagement = () => {
   const [hotels, setHotels] = useState([]);
