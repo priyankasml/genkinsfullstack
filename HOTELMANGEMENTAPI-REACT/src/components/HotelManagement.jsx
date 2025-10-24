@@ -12,7 +12,7 @@ const HotelManagement = () => {
     type: "Budget",
     rating: 1
   });
-  const [message, setMessage] = useState(null); // New state for messages
+  const [message, setMessage] = useState(null);
 
   const fetchHotels = async () => {
     try {
@@ -29,7 +29,7 @@ const HotelManagement = () => {
 
   const showMessage = (text, type = "success") => {
     setMessage({ text, type });
-    setTimeout(() => setMessage(null), 3000); // message disappears after 3s
+    setTimeout(() => setMessage(null), 3000);
   };
 
   const handleChange = (e) => {
@@ -158,16 +158,7 @@ const cardGradient = (type) => {
 };
 
 const styles = {
-  container: {
-    maxWidth: '1200px',
-    margin: '50px auto',
-    background: 'linear-gradient(135deg, #ffeaa7, #fab1a0)',
-    padding: 40,
-    borderRadius: 20,
-    boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-    textAlign: 'center',
-    fontFamily: "'Poppins', sans-serif"
-  },
+  container: { maxWidth: '1200px', margin: '50px auto', background: 'linear-gradient(135deg, #ffeaa7, #fab1a0)', padding: 40, borderRadius: 20, boxShadow: '0 20px 40px rgba(0,0,0,0.2)', textAlign: 'center', fontFamily: "'Poppins', sans-serif" },
   heading: { marginBottom: 30, fontSize: 36, color: '#2d3436', textShadow: '1px 1px 3px rgba(0,0,0,0.2)' },
   form: { background: '#fff3e0', padding: 30, borderRadius: 15, marginBottom: 40, boxShadow: '0 10px 30px rgba(0,0,0,0.15)' },
   formHeading: { marginBottom: 20, color: '#d35400' },
