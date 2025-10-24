@@ -1,4 +1,4 @@
-
+version: "3.8"
 
 services:
   mysqldb:
@@ -22,11 +22,11 @@ services:
   backend:
     image: priyankasml/hotel-backend:latest
     container_name: springboot-hoteldb
-    ports:
-      - "8081:2000"
     depends_on:
       mysqldb:
         condition: service_healthy
+    ports:
+      - "2000:2000"     # ✅ Corrected (host:container)
     restart: on-failure
     networks:
       - springboot-mysql-net
@@ -34,10 +34,10 @@ services:
   frontend:
     image: priyankasml/hotel-frontend:latest
     container_name: react-hoteldb
-    ports:
-      - "3020:80"
     depends_on:
       - backend
+    ports:
+      - "3020:80"
     restart: on-failure
     networks:
       - springboot-mysql-net
