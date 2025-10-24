@@ -8,7 +8,7 @@ public class HotelmangementapiSrpingbootApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HotelmangementapiSrpingbootApplication.class, args);
-		System.out.print("Project running............");
+		System.out.println("Project running............");
 	}
 
 }

@@ -26,7 +26,7 @@ services:
       mysqldb:
         condition: service_healthy
     ports:
-      - "2000:2000"     # ✅ Corrected (host:container)
+      - "8081:2000"     # ✅ Corrected (host:container)
     restart: on-failure
     networks:
       - springboot-mysql-net
